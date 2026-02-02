@@ -26,6 +26,18 @@ pub const SecondaryMetrics = struct {
     centroid_covariance: f64,
 };
 
+fn histogramMedian(hist: *const [65536]u32, pixel_count: u64) u16 {
+    if (pixel_count == 0) return 0;
+    const target = (pixel_count + 1) / 2;
+    var acc: u64 = 0;
+    var i: usize = 0;
+    while (i < hist.len) : (i += 1) {
+        acc += hist[i];
+        if (acc >= target) return @as(u16, @intCast(i));
+    }
+    return 0;
+}
+
 pub fn computeMainMetrics(image: inputs.fits_image.FitsImage) MainMetrics {
     const width = image.width;
     const height = image.height;
@@ -56,16 +68,7 @@ pub fn computeMainMetrics(image: inputs.fits_image.FitsImage) MainMetrics {
     const variance = sum_sq / @as(f64, @floatFromInt(pixel_count)) - mean * mean;
     const stddev = if (variance > 0.0) @sqrt(variance) else 0.0;
 
-    const median_val: u16 = blk: {
-        const target = pixel_count / 2;
-        var acc: u64 = 0;
-        var i: usize = 0;
-        while (i < hist.len) : (i += 1) {
-            acc += hist[i];
-            if (acc >= target) break :blk @as(u16, @intCast(i));
-        }
-        break :blk @as(u16, 0);
-    };
+    const median_val: u16 = histogramMedian(&hist, pixel_count);
 
     var dev_hist: [65536]u32 = [_]u32{0} ** 65536;
     for (image.pixels) |px| {
@@ -73,16 +76,7 @@ pub fn computeMainMetrics(image: inputs.fits_image.FitsImage) MainMetrics {
         dev_hist[diff] += 1;
     }
 
-    const mad_val: u16 = blk: {
-        const target = pixel_count / 2;
-        var acc: u64 = 0;
-        var i: usize = 0;
-        while (i < dev_hist.len) : (i += 1) {
-            acc += dev_hist[i];
-            if (acc >= target) break :blk @as(u16, @intCast(i));
-        }
-        break :blk @as(u16, 0);
-    };
+    const mad_val: u16 = histogramMedian(&dev_hist, pixel_count);
 
     const sigma = 1.4826 * @as(f64, @floatFromInt(mad_val));
     const max_u16 = @as(u16, @intFromFloat(@min(max_val, 65535.0)));
@@ -354,4 +348,13 @@ pub fn computeWeight(main: MainMetrics, phd2: Phd2Metrics, secondary: SecondaryM
     const sec_settle_penalty = 1.0 - @min(0.4, secondary.settle_peak_fraction * 0.4);
 
     return ((main_score + phd2_score + sec_score) / 3.0) * settle_penalty * sec_settle_penalty;
+}
+
+test "histogram median uses middle value for odd counts" {
+    var hist: [65536]u32 = [_]u32{0} ** 65536;
+    hist[0] = 1;
+    hist[10] = 1;
+    hist[20] = 1;
+    const median = histogramMedian(&hist, 3);
+    try std.testing.expectEqual(@as(u16, 10), median);
 }
