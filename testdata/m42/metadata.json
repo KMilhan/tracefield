@@ -1,0 +1,159 @@
+{
+  "config": {
+    "subs": 16,
+    "width": 2048,
+    "height": 2048,
+    "exposure_s": 60.0,
+    "guide_fps": 30,
+    "guide_seconds": 5,
+    "focal_length_mm": 2032.0,
+    "pixel_size_um": 3.45,
+    "sqm": 20.0
+  },
+  "subs": [
+    {
+      "sub": 1,
+      "fits": "testdata/m42/subs/sub_001.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_001.txt",
+      "ser": "testdata/m42/secondary/guide_sub_001.ser",
+      "seeing_fwhm": 2.9289260747014896,
+      "rms_ra": 0.4801397452875186,
+      "rms_dec": 0.4394867447869667
+    },
+    {
+      "sub": 2,
+      "fits": "testdata/m42/subs/sub_002.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_002.txt",
+      "ser": "testdata/m42/secondary/guide_sub_002.ser",
+      "seeing_fwhm": 1.988165437140987,
+      "rms_ra": 0.4733646965078987,
+      "rms_dec": 0.415608709683831
+    },
+    {
+      "sub": 3,
+      "fits": "testdata/m42/subs/sub_003.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_003.txt",
+      "ser": "testdata/m42/secondary/guide_sub_003.ser",
+      "seeing_fwhm": 2.506497580745419,
+      "rms_ra": 0.454362437467298,
+      "rms_dec": 0.4224654893391231
+    },
+    {
+      "sub": 4,
+      "fits": "testdata/m42/subs/sub_004.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_004.txt",
+      "ser": "testdata/m42/secondary/guide_sub_004.ser",
+      "seeing_fwhm": 2.0295575873225116,
+      "rms_ra": 0.44314559389116615,
+      "rms_dec": 0.43058289537093986
+    },
+    {
+      "sub": 5,
+      "fits": "testdata/m42/subs/sub_005.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_005.txt",
+      "ser": "testdata/m42/secondary/guide_sub_005.ser",
+      "seeing_fwhm": 2.736965391984629,
+      "rms_ra": 0.47344598198267607,
+      "rms_dec": 0.4326840092584724
+    },
+    {
+      "sub": 6,
+      "fits": "testdata/m42/subs/sub_006.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_006.txt",
+      "ser": "testdata/m42/secondary/guide_sub_006.ser",
+      "seeing_fwhm": 1.6160518726148214,
+      "rms_ra": 0.46402035716484574,
+      "rms_dec": 0.4092280768781408
+    },
+    {
+      "sub": 7,
+      "fits": "testdata/m42/subs/sub_007.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_007.txt",
+      "ser": "testdata/m42/secondary/guide_sub_007.ser",
+      "seeing_fwhm": 2.9362936808860987,
+      "rms_ra": 0.45377343042537216,
+      "rms_dec": 0.442607979663963
+    },
+    {
+      "sub": 8,
+      "fits": "testdata/m42/subs/sub_008.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_008.txt",
+      "ser": "testdata/m42/secondary/guide_sub_008.ser",
+      "seeing_fwhm": 1.6123730729965429,
+      "rms_ra": 0.475463722545286,
+      "rms_dec": 0.43463088137736033
+    },
+    {
+      "sub": 9,
+      "fits": "testdata/m42/subs/sub_009.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_009.txt",
+      "ser": "testdata/m42/secondary/guide_sub_009.ser",
+      "seeing_fwhm": 3.2707955942581712,
+      "rms_ra": 0.4454826939876304,
+      "rms_dec": 0.39340210995191993
+    },
+    {
+      "sub": 10,
+      "fits": "testdata/m42/subs/sub_010.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_010.txt",
+      "ser": "testdata/m42/secondary/guide_sub_010.ser",
+      "seeing_fwhm": 2.2330181270086613,
+      "rms_ra": 0.47366952896680803,
+      "rms_dec": 0.396582700893585
+    },
+    {
+      "sub": 11,
+      "fits": "testdata/m42/subs/sub_011.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_011.txt",
+      "ser": "testdata/m42/secondary/guide_sub_011.ser",
+      "seeing_fwhm": 2.4647833303581432,
+      "rms_ra": 0.47847676141261064,
+      "rms_dec": 0.41988580948091464
+    },
+    {
+      "sub": 12,
+      "fits": "testdata/m42/subs/sub_012.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_012.txt",
+      "ser": "testdata/m42/secondary/guide_sub_012.ser",
+      "seeing_fwhm": 2.438478931973895,
+      "rms_ra": 0.48036764525137016,
+      "rms_dec": 0.42616465052355107
+    },
+    {
+      "sub": 13,
+      "fits": "testdata/m42/subs/sub_013.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_013.txt",
+      "ser": "testdata/m42/secondary/guide_sub_013.ser",
+      "seeing_fwhm": 3.283989247493608,
+      "rms_ra": 0.4683468273879871,
+      "rms_dec": 0.39248092120289385
+    },
+    {
+      "sub": 14,
+      "fits": "testdata/m42/subs/sub_014.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_014.txt",
+      "ser": "testdata/m42/secondary/guide_sub_014.ser",
+      "seeing_fwhm": 2.84039622743417,
+      "rms_ra": 0.45378219049392476,
+      "rms_dec": 0.41934272460688854
+    },
+    {
+      "sub": 15,
+      "fits": "testdata/m42/subs/sub_015.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_015.txt",
+      "ser": "testdata/m42/secondary/guide_sub_015.ser",
+      "seeing_fwhm": 3.312964730959117,
+      "rms_ra": 0.473768019173822,
+      "rms_dec": 0.4350915266005153
+    },
+    {
+      "sub": 16,
+      "fits": "testdata/m42/subs/sub_016.fits",
+      "phd2": "testdata/m42/phd2/PHD2_GuideLog_sub_016.txt",
+      "ser": "testdata/m42/secondary/guide_sub_016.ser",
+      "seeing_fwhm": 2.363645713802542,
+      "rms_ra": 0.4777793014780195,
+      "rms_dec": 0.41099687603489715
+    }
+  ]
+}

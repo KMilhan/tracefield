@@ -1,0 +1,39 @@
+{
+  "used_ekos": true,
+  "used_session_ser": true,
+  "session_ser_path": "testdata/m42/secondary/guide2.ser",
+  "weights": [
+    0.3494142616845624,
+    0.21972913021510748,
+    0.38307147256871377
+  ],
+  "secondary_samples": [
+    {
+      "id": 2,
+      "centroid_rms": 7.466350068330867,
+      "high_freq_rms": 10.62810512106929,
+      "centroid_energy": 55.74638334286434,
+      "peak_burst_rate": 0.006666666666666667,
+      "fwhm_burst_rate": 0.006666666666666667,
+      "centroid_covariance": 27.481159283612868
+    },
+    {
+      "id": 6,
+      "centroid_rms": 14.641788568049044,
+      "high_freq_rms": 21.067724679390484,
+      "centroid_energy": 214.3819724714517,
+      "peak_burst_rate": 0.02666666666666667,
+      "fwhm_burst_rate": 0.02666666666666667,
+      "centroid_covariance": 53.5702825223948
+    },
+    {
+      "id": 12,
+      "centroid_rms": 7.772251735363235,
+      "high_freq_rms": 11.084169764222079,
+      "centroid_energy": 60.40789703785682,
+      "peak_burst_rate": 0.013333333333333334,
+      "fwhm_burst_rate": 0.013333333333333334,
+      "centroid_covariance": -24.656719784347846
+    }
+  ]
+}
